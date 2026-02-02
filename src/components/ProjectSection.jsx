@@ -24,7 +24,15 @@ export default function ProjectSection() {
         tags:["React","Bootstrap"],
         link:"https://form-template-orpin.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
+    },
+      {
+        title:"CGPA Calculator",
+        details:"A simple web app to quickly calculate GPA and CGPA using course credits and grades.",
+        tags:["React","Bootstrap"],
+        link:"https://cgpa-calculator-lemon-seven.vercel.app/",
+        gitLink:'https://github.com/rujoybarai',
     }
+
 
 
 ]
