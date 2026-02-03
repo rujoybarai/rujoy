@@ -10,6 +10,7 @@ export default function ProjectSection() {
         tags:["HTML","CSS","JavaScript"],
         link:"https://random-password-generator-nine-tau.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
+        color:'rgba(0, 255, 115, 0.87)',
     },
     {
         title:"Todo-app",
@@ -17,6 +18,7 @@ export default function ProjectSection() {
         tags:["React","Bootstrap"],
         link:"https://todo-app-version2.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
+        color:'rgba(0, 247, 255, 0.87)',
     },
     {
         title:"Form-template",
@@ -24,6 +26,7 @@ export default function ProjectSection() {
         tags:["React","Bootstrap"],
         link:"https://form-template-orpin.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
+        color:'rgba(230, 0, 255, 0.87)',
     },
       {
         title:"CGPA Calculator",
@@ -31,6 +34,7 @@ export default function ProjectSection() {
         tags:["React","Bootstrap"],
         link:"https://cgpa-calculator-lemon-seven.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
+        color:'rgba(255, 0, 136, 0.87)',
     }
 
 
@@ -54,7 +58,7 @@ export default function ProjectSection() {
                   transition={{ duration: 0.3 }}
                   whileInView={{ opacity:1,transition:{duration:1.5}}}
                  
-
+                 style={{backgroundColor:item.color}}
                 >
             <h4>{item.title}</h4>
             <p style={{width:'200px'}}>{item.details}</p>
