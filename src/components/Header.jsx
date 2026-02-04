@@ -1,9 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Logo from "../assets/Logo.png"
+import { MdForwardToInbox } from "react-icons/md"
 
 
-export default function Header({scrollToContact}) {
+
+export default function Header({scrollToContact,scrollMassge}) {
 
   return (
     <div className="header">
@@ -24,7 +26,13 @@ export default function Header({scrollToContact}) {
             
             whileTap={{ scale: 0.95 }}
             ><a onClick={scrollToContact} >Contact Me</a></motion.li>
-
+           
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+            
+            whileTap={{ scale: 0.95 }}
+           
+            ><a  onClick={scrollMassge} ><MdForwardToInbox  /></a></motion.li>
           
         </ul>
     </div>

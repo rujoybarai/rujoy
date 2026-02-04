@@ -47,7 +47,20 @@ width: 100%;
     width: 100%;
 }
 
+.massage-container{
+    width: 80%;
+    margin-left: 50px;
+}
+.M-box{
+ width: 100%;
 
+
+}
+.M-area{
+   
+    box-sizing: border-box;
+    width: 80%;
+}
 
 }
     

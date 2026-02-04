@@ -3,7 +3,7 @@ import ProfileLink from './ProfileLink'
 
 
 
-export default function ProfileDetails({ShowMassage}) {
+export default function ProfileDetails() {
 
   
 
@@ -15,11 +15,7 @@ export default function ProfileDetails({ShowMassage}) {
 
 
         <ProfileLink />
-        {ShowMassage && <span style={{margin:'10px 0px',
-                     backgroundColor:"green",
-                     padding:'0px 5px'
-
-        }}>Thank you for contacting me ! {ShowMassage} </span>     }
+      
         
     </div>
   )

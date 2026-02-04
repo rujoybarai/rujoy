@@ -60,6 +60,7 @@
 .App{
   background: radial-gradient(rgb(123, 102, 216), rgba(148, 61, 211, 0.822), rgb(75, 17, 113) );
   min-height: 100vh;
+  
 
 }
 
@@ -513,4 +514,62 @@ opacity: 0.8;
   border-radius: 5px;
   background-color: black;
   color: white;
+}
+
+
+.App-Massage{
+  background: radial-gradient(rgb(123, 102, 216), rgba(148, 61, 211, 0.822), rgb(75, 17, 113) );
+  min-height: 250px;
+ 
+  width: 100%;
+  background-image: url("./assets/pic2.png");
+  background-size: contain;
+}
+.massage-container{
+  width: 40%;
+  min-height: 200px;
+ position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+  margin-left: 100px;
+  
+
+
+}
+.M-box{
+  width: 80%;
+  min-height: 150px;
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  margin: 20px auto 10px auto;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.888);
+  border-radius: 15px;
+  position: relative;
+}
+.M-area{
+  width: 70%;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(68, 65, 65);
+  
+}
+#M-delete{
+ position: absolute;
+ right: 20px;
+ top: 10px;
+}
+
+#M-delete:active{
+  opacity: 0.7;
+  transform: scale(0.7);
 }

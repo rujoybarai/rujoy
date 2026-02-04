@@ -9,14 +9,16 @@ const UseMass=useRef();
 const [done,setDone]=useState();
 
 
-const {setShowMassage}=props;
+const {AddMassage,scrollMassge}=props;
 
  const handleSubmit =(event)=>{
     event.preventDefault();
     const Name =UseName.current.value;
     const Email =UseEmail.current.value;
     const Mass =UseMass.current.value;
-    setShowMassage(Name,Email,Mass);
+
+    if(Name && Email && Mass){
+     AddMassage(Name,Email,Mass);
     
  
     setDone({
@@ -24,12 +26,19 @@ const {setShowMassage}=props;
       color:'green',
       
     })
-    
-     setTimeout(() => setShowMassage(''), 10000);
-     setTimeout(() => setDone(''), 1000);
+
+    setTimeout(() => setDone(''), 1000);
      UseName.current.value="";
      UseEmail.current.value="";
      UseMass.current.value="";
+    
+
+    }else{
+      alert("Mising Information !");
+    }
+    
+     
+     
 
  }
 
@@ -53,7 +62,7 @@ const {setShowMassage}=props;
             <textarea type="text" placeholder='Enter your message' ref={UseMass}  />
             
             </div>
-            <button type='submit' style={{backgroundColor:done?.color}}>{(done?.title === "Done")? (done.title): ("Send")}</button>
+            <button type='submit' onClick={scrollMassge} style={{backgroundColor:done?.color}}>{(done?.title === "Done")? (done.title): ("Send")}</button>
         </form>
       </div>
     </div>
