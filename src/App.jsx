@@ -13,6 +13,8 @@ import { Analytics } from "@vercel/analytics/react"
 
 import Massage from './components/MassagePage/Massage.jsx'
 
+import {PutMassage} from './components/MassagePage/FireBase.js'
+
 
 function App() {
   
@@ -27,12 +29,22 @@ function App() {
 
 useEffect(()=>{
   localStorage.setItem('ShowMassage',JSON.stringify(ShowMassage));
+
+  PutMassage(ShowMassage);
+  
+
+
 },[ShowMassage]);
 
 
+
   const AddMassage =(Name,Email,Mass)=>{
-     setShowMassage( [{Name, Email, Mass }]);
+     setShowMassage( {Name, Email, Mass });
+
+
   }
+
+  
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -41,6 +53,12 @@ useEffect(()=>{
    const scrollMassge =()=>{
     MassaRef.current?.scrollIntoView({behavior:'smooth'})
    }
+
+
+  // //  firebase database code
+   
+
+
   return (
     <div  className="App">
     
