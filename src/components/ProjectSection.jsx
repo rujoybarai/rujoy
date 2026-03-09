@@ -3,8 +3,28 @@ import { LuExternalLink } from "react-icons/lu"
 import { FiGithub } from "react-icons/fi"
 import { motion } from 'framer-motion'
 
+
 export default function ProjectSection() {
-    const ProjectList=[{
+    const ProjectList=[
+        
+              {
+        title:"Electric Scooter",
+        details:"Modern electric scooter showcase website built with React.js, Bootstrap, Firebase, and Framer Motion featuring responsive design and smooth animations.",
+        tags:["React.js","bootstrap","Motion","firebase"],
+        link:"https://electric-scooters-website.vercel.app/",
+        gitLink:'https://github.com/rujoybarai',
+        color:'rgba(179, 255, 0, 0.87)',
+        },
+        {
+        title:"AppleGaget",
+        details:"A responsive e-commerce website built with React.js, Tailwind CSS, and Framer Motion, featuring a smooth animation experience.",
+        tags:["React.js","tailwindCSS","Motion"],
+        link:"https://apple-gaget.vercel.app/",
+        gitLink:'https://github.com/rujoybarai',
+        color:'rgba(179, 255, 0, 0.87)',
+        },
+        
+        {
         title:"Random-Password-Generator",
         details:"A simple and secure Random Password Generator web application built with HTML, CSS, and JavaScript.",
         tags:["HTML","CSS","JavaScript"],
@@ -61,11 +81,11 @@ export default function ProjectSection() {
                  style={{backgroundColor:item.color}}
                 >
             <h4>{item.title}</h4>
-            <p style={{width:'200px'}}>{item.details}</p>
-            <div className='tags'>
+            <p style={{width:'100%'}}>{item.details}</p>
+            <div className='tags' >
               {
                 item.tags.map((item,i)=>(
-                     <p key={i}>{item}</p>
+                     <p key={i} style={{fontSize:'10px'}}>{item}</p>
               
                  ) )
               }
